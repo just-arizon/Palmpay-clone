@@ -6,9 +6,21 @@ module.exports = {
   ],
    darkMode: false, // or 'media' or 'class'
    theme: {
-     extend: {},
+     extend: {
+      backgroundColor:
+      {
+        'brand-color':"#6A35ff"
+      },
+      textColor:{
+        'brand-color':"#6A35ff"
+      }
+     },
+     
    },
-   variants: {},
+   variants: {
+    extend: {
+    }
+   },
    plugins: [],
  }
 

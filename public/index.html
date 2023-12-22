@@ -83,7 +83,7 @@
                 <span class="flex gap-2">
                     <span class="flex items-center relative">
                         <div class="bg-white behind"></div>
-                        <iconify-icon icon="clarity:shield-check-solid" width="16" height="16" class="text-green-200 front"></iconify-icon>
+                        <iconify-icon icon="clarity:shield-check-solid" width="16" height="16" class="text-green-300 front"></iconify-icon>
                     </span>
                     <span class="text-sm">Total Balance</span>
                     <span><iconify-icon icon="teenyicons:eye-closed-solid" width="16" height="16"></iconify-icon></span>
@@ -92,19 +92,41 @@
 
             <div class="actual__balance flex justify-between pl-2 pr-2">
                 <div class="flex items-center">****</div>
-                <button class="text-xs bg-purple-600 p-2 text-white rounded-full">Add Money</button>
+                <button class="text-xs bg-brand-color p-2 text-white rounded-full">Add Money</button>
             </div>
           </div>
           <div class="p-2 flex gap-1 justify-between">
-            <span class="flex items-center"><iconify-icon icon="material-symbols-light:savings" width="16" height="16" class="text-purple-500"></iconify-icon></span>
-            <span class="text-xs">Start a savings account, earn up to 20% p.a. daily</span>
+            <span class="flex items-center"><iconify-icon icon="material-symbols-light:savings" width="16" height="16" class="text-brand-color"></iconify-icon></span>
+            <span class="text-xs">Start a savings account, earn up to <span class="text-brand-color font-semibold">20% p.a.</span> daily</span>
             <span>
-                <iconify-icon icon="iconamoon:arrow-right-6-circle-duotone" width="16" height="16" class="text-purple-500"></iconify-icon>
+                <iconify-icon icon="iconamoon:arrow-right-6-circle-duotone" width="16" height="16" class="text-brand-color"></iconify-icon>
             </span>
           </div>
       </div>
     </div>
-    <div class="container"></div>
+    <div class="container p-2.5">
+        <div class="bg-white rounded-md p-2">
+            <div class="text-sm font-semibold">Money Transfer</div>
+            <div class="flex justify-between items-center p-2.5">
+                <div>
+                    <div class="flex justify-center">
+                        <iconify-icon icon="bxs:bank" width="30" height="30" class="text-brand-color"></iconify-icon>
+                    </div>                  <div class="text-xs">To Bank</div>
+                </div>
+                <div>
+                    <div class="flex justify-center">
+                        <iconify-icon icon="material-symbols:contacts-product" width="30" class="text-brand-color"></iconify-icon>
+                    </div>
+                    <div class="text-xs">To Palmpay</div>
+                </div>
+                <div>
+                    <div class="flex justify-center">
+                        <iconify-icon icon="clarity:wallet-solid" width="30" class="text-blue-600"></iconify-icon>
+                    </div>                  <div class="text-xs">To Bank</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container"></div>
     <div class="container"></div>
    </main>
