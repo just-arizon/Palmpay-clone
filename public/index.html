@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../src/navigation.css">
     <link rel="stylesheet" href="../src/profile.css">
+    <link rel="stylesheet" href="../src/balance.css">
 </head>
-<body>
+<body class="bg-purple-50">
     <nav class="navbar">
         <ul class="p-3 links__container flex justify-between">
             <li>
@@ -35,7 +36,7 @@
                 <button class="nav--icon__wrapper flex justify-center">
                     <div class="nav--icon"></div>
                 </button>
-                <div class="nav--name text-xs">Giveaway</div>
+                <div class="nav--name text-xs text-center">Giveaway</div>
             </li>
             <li>
                 <button class="nav--icon__wrapper flex justify-center">
@@ -75,7 +76,34 @@
         </span>
         <span class="text-orange-300 text-xs flex-1"><marquee scrollamount="4" behavior="" direction="">Based on CBN KYC requirements, please verify your BVN or NIN information to better enjoy Palmpay's service.</marquee></span>
     </div>
-    <div class="container"></div>
+    <div class="w-full p-2.5">
+      <div class="container bg-white rounded-lg">
+          <div class="balance__container rounded-lg p-2">
+            <div class="toggle__wrapper">
+                <span class="flex gap-2">
+                    <span class="flex items-center relative">
+                        <div class="bg-white behind"></div>
+                        <iconify-icon icon="clarity:shield-check-solid" width="16" height="16" class="text-green-200 front"></iconify-icon>
+                    </span>
+                    <span class="text-sm">Total Balance</span>
+                    <span><iconify-icon icon="teenyicons:eye-closed-solid" width="16" height="16"></iconify-icon></span>
+                </span>
+            </div>
+
+            <div class="actual__balance flex justify-between pl-2 pr-2">
+                <div class="flex items-center">****</div>
+                <button class="text-xs bg-purple-600 p-2 text-white rounded-full">Add Money</button>
+            </div>
+          </div>
+          <div class="p-2 flex gap-1 justify-between">
+            <span class="flex items-center"><iconify-icon icon="material-symbols-light:savings" width="16" height="16" class="text-purple-500"></iconify-icon></span>
+            <span class="text-xs">Start a savings account, earn up to 20% p.a. daily</span>
+            <span>
+                <iconify-icon icon="iconamoon:arrow-right-6-circle-duotone" width="16" height="16" class="text-purple-500"></iconify-icon>
+            </span>
+          </div>
+      </div>
+    </div>
     <div class="container"></div>
     <div class="container"></div>
     <div class="container"></div>
