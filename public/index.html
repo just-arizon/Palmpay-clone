@@ -8,6 +8,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../src/navigation.css">
+    <link rel="stylesheet" href="../src/profile.css">
 </head>
 <body>
     <nav class="navbar">
@@ -16,46 +17,56 @@
                 <div class="nav--icon__wrapper flex justify-center">
                     <div class="nav--icon"></div>
                 </div>
-                <div class="nav--name">Home</div>
+                <div class="nav--name text-xs">Home</div>
             </li>
             <li>
                 <div class="nav--icon__wrapper flex justify-center">
                     <div class="nav--icon"></div>
                 </div>
-                <div class="nav--name">Loans</div>
+                <div class="nav--name text-xs">Loans</div>
             </li>
             <li>
                 <div class="nav--icon__wrapper flex justify-center">
                     <div class="nav--icon"></div>
                 </div>
-                <div class="nav--name">Invest</div>
+                <div class="nav--name text-xs">Invest</div>
             </li>
             <li>
                 <div class="nav--icon__wrapper flex justify-center">
                     <div class="nav--icon"></div>
                 </div>
-                <div class="nav--name">Giveaway</div>
+                <div class="nav--name text-xs">Giveaway</div>
             </li>
             <li>
                 <div class="nav--icon__wrapper flex justify-center">
                     <div class="nav--icon"></div>
                 </div>
-                <div class="nav--name">Me</div>
+                <div class="nav--name text-xs">Me</div>
             </li>
         </ul>
     </nav>
    <main>
-    <div class="container flex justify-between">
-        <div class="profile__container">
-            <div class="profile--svg"></div>
+    <div class=" flex justify-between p-2.5 w-full">
+        <div class="profile__container flex gap-2">
+            <div class="profile--svg flex items-center">
+                <div class="svg--container w-9 h-9 rounded-full flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <iconify-icon icon="iconamoon:profile-fill" style="color: white;" width="27" height="27"></iconify-icon>
+                    </div>
+                </div>
+            </div>
             <div class="profile--name">
                 <h1 class="mb-0  text-sm">Hi, arinze</h1>
                 <p class="text-xs text-gray-400">Welcome, let's make payments!</p>
             </div>
         </div>
-        <div class="notification__container">
-            <div class="scanner--svg"></div>
-            <div class="bell--name"></div>
+        <div class="notification__container flex gap-4">
+            <div class="scanner--svg">
+                <iconify-icon icon="iconamoon:scanner-light" style="color: #475467;" width="24" height="24"></iconify-icon>
+            </div>
+            <div class="bell--name">
+                <iconify-icon icon="teenyicons:bell-outline" style="color: #475467;" width="24" height="24"></iconify-icon>
+            </div>
         </div>
     </div>
     <div class="container"></div>
