@@ -668,6 +668,10 @@ video {
   padding: 0.75rem;
 }
 
+.p-7 {
+  padding: 1.75rem;
+}
+
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -782,6 +786,7 @@ body {
 
 main {
   display: block;
+  height:165vh;
 }
 
 /**
