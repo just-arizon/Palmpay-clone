@@ -357,7 +357,8 @@
   [hidden] {
     display: none;
   }
- .sector__parent{
+ .sector__parent,
+ .footer{
   background: #18191F;
  }
  .linear-gradient{
@@ -382,4 +383,7 @@
 
 .contact-btn{
   background: #6d46db;
+}
+.footer-links{
+  color: #d9dbe1;
 }
