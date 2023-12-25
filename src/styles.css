@@ -391,3 +391,9 @@
 .dropdown-item{
   background: #f7f7fb;
 }
+.dropdown-content {
+  display: none;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
