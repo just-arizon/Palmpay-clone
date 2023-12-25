@@ -1,269 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Palmpay</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../src/navigation.css">
-    <link rel="stylesheet" href="../src/profile.css">
-    <link rel="stylesheet" href="../src/balance.css">
-</head>
-<body class="">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../src/navigation.css" />
+    <link rel="stylesheet" href="../src/profile.css" />
+    <link rel="stylesheet" href="../src/balance.css" />
+  </head>
+  <body class="">
     <nav class="navbar lg:pl-24 lg:pr-20 pt-2 fixed w-full bg-white z-50">
-        <ul class="p-3 links__container flex justify-between">
-            <li class="flex gap-14">
-                <div class="flex items-center"><img src="./images/logo.png" alt="logo" class="logo w-28 lg:w-32 h-auto"></div>
-                <div class="lg:flex items-center gap-6 hidden ">
-                    <a href="" class="mr-6">Personal</a>
-                    <a href="" class="mr-6">Business</a>
-                    <a href="" class="mr-6">Company</a>
+      <ul class="p-3 links__container flex justify-between mr-6">
+        <li class="flex gap-14">
+          <div class="flex items-center">
+            <img
+              src="./images/logo.png"
+              alt="logo"
+              class="logo w-28 lg:w-32 h-auto"
+            />
+          </div>
+          <div class="lg:flex items-center gap-6 hidden">
+            <a href="" class="mr-6">Personal</a>
+            <a href="" class="mr-6">Business</a>
+            <a href="" class="mr-6">Company</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="flex flex-col">
+            <div class="flex gap-2">
+              <button
+                class="bg-blue-300 drop-btn flex lg:py-2 lg:px-6 py-1.5 px-3 justify-between rounded-full lg:gap-7 gap-2"
+                id="myDropdown"
+              >
+                <div class="flex gap-2 items-center">
+                  <img src="./images/NG.png" alt="Nigerian flag" class="w-6" />
+                  <span class="text-xs font-semibold hidden lg:block"
+                    >Nigeria</span
+                  >
                 </div>
-            </li>
-
-
-            <li>
-                <div class=" flex flex-col">
-                    <div class="flex gap-2">
-                <button class="bg-blue-300 drop-btn  flex lg:py-2 lg:px-6 py-1.5 px-3 justify-between rounded-full lg:gap-7 gap-2" id="myDropdown">
-                            <div class="flex gap-2 items-center">
-                                <img src="./images/NG.png" alt="Nigerian flag" class="w-6">
-                                <span class="text-xs font-semibold hidden lg:block">Nigeria</span>
-                            </div>
-                            <div class="chevron">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32"><path fill="currentColor" d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z"/></svg>
-                            </div>
-                        </button>
-
-                        <button class="block lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
-                        </button>
-                    </div>
-
-                    <div class="dropdown-content flex flex-col absolute lg:top-20  shadow-2xl bg-white rounded-2xl  lg:right-40 right-10 top-20 pb-5 pt-1 pl-5 pr-16">
-                        <div class="pb-2 pt-1 text-gray-400 text-sm">Select a region</div>
-                        <a href="#" class="dropdown-item text-center lg:py-2 lg:px-6 py-1.5 px-6 rounded-full flex gap-2 mb-3">
-                            <span><img src="./images/NG.png" alt="" class="w-6"></span>
-                            <span>Nigeria</span></a>
-                        <a href="#" class="dropdown-item text-center lg:py-2 lg:px-6 py-1.5 px-6 rounded-full flex gap-2 mb-3">
-                            <span><img src="./images/Flag_of_Tanzania.png" alt="" class="w-6"></span>
-                            <span>Tanzania</span></a>
-                        <a href="#" class="dropdown-item text-center lg:py-2 lg:px-6 py-1.5 px-6 rounded-full flex gap-2 mb-3">
-                            <span><img src="https://api.iconify.design/openmoji/flag-ghana.svg?width=24" alt="" class="w-6"></span>
-                            <span class="text-center flex gap-2 items-center"><span>Ghana</span> <span class="text-purple-400 text-center text-xs">Coming Soon</span></span></a>
-                    </div>
+                <div class="chevron">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z"
+                    />
+                  </svg>
                 </div>
-            </li>
-           
-        </ul>
+              </button>
+
+              <div class="relative">
+                  <div class="relative right-0">
+                      <button class="block lg:hidden absolute" id="open-btn">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 8h16M4 16h16"
+                          />
+                        </svg>
+                      </button>
+                      <button class="block lg:hidden absolute pl-px" id="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7l10 10M7 17L17 7"/></svg>
+                      </button>
+                  </div>
+              </div>
+            </div>
+
+            <div
+              class="dropdown-content flex flex-col absolute lg:top-20 shadow-2xl bg-white rounded-2xl lg:right-40 right-10 top-20 pb-5 pt-1 pl-5 pr-16"
+            >
+              <div class="pb-2 pt-1 text-gray-400 text-sm">Select a region</div>
+              <a
+                href="#"
+                class="dropdown-item text-center lg:py-2 lg:px-6 py-1.5 px-6 rounded-full flex gap-2 mb-3"
+              >
+                <span><img src="./images/NG.png" alt="" class="w-6" /></span>
+                <span>Nigeria</span></a
+              >
+              <a
+                href="#"
+                class="dropdown-item text-center lg:py-2 lg:px-6 py-1.5 px-6 rounded-full flex gap-2 mb-3"
+              >
+                <span
+                  ><img src="./images/Flag_of_Tanzania.png" alt="" class="w-6"
+                /></span>
+                <span>Tanzania</span></a
+              >
+              <a
+                href="#"
+                class="dropdown-item text-center lg:py-2 lg:px-6 py-1.5 px-6 rounded-full flex gap-2 mb-3"
+              >
+                <span
+                  ><img
+                    src="https://api.iconify.design/openmoji/flag-ghana.svg?width=24"
+                    alt=""
+                    class="w-6"
+                /></span>
+                <span class="text-center flex gap-2 items-center"
+                  ><span>Ghana</span>
+                  <span class="text-purple-400 text-center text-xs"
+                    >Coming Soon</span
+                  ></span
+                ></a
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
     </nav>
 
-   <main class="pt-24">
+    <div
+      class="hamburger-menu w-full top-5 z-40 h-full lg:hidden flex flex-col fixed shadow-2xl bg-white px-3 pt-16 pt-1 menu-hidden"
+    >
+      <a
+        href="#"
+        class="text-center px-3 py-6 rounded-full flex gap-2 justify-between"
+      >
+        <span class="text-xl font-semibold">Personal</span>
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M5.47 13.03a.75.75 0 0 1 0-1.06L9.44 8L5.47 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+      </a>
+      <a
+        href="#"
+        class="text-center px-3 py-6 rounded-full flex gap-2 justify-between"
+      >
+        <span class="text-xl font-semibold">Business</span>
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M5.47 13.03a.75.75 0 0 1 0-1.06L9.44 8L5.47 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+      </a>
+      <a
+        href="#"
+        class="text-center px-3 py-6 rounded-full flex gap-2 justify-between"
+      >
+        <span class="text-xl font-semibold">Company</span>
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M5.47 13.03a.75.75 0 0 1 0-1.06L9.44 8L5.47 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <main class="pt-24">
+      <div class="flex justify-center w-full">
+        <h1
+          class="text-center font-extrabold pt-16 pb-5 hero--heading lg:w-2/3 lg:text-7xl leading-10"
+        >
+          Finance That Fits Your Life
+        </h1>
+      </div>
+
+      <div class="flex justify-center">
+        <p
+          class="text-center hero-text font-normal p-5 lg:w-11/12 lg:text-2xl leading-7"
+        >
+          Seamlessly send and receive money, effortlessly pay your bills, shop
+          anywhere with ease, and take full control of your finances - all in
+          PalmPay
+        </p>
+      </div>
+
+      <div class="flex justify-center gap-4 mt-12 flex-wrap">
+        <img
+          src="./images/googlePlayBlack.png"
+          alt=""
+          class="action-to-download w-36"
+        />
+        <img
+          src="./images/appStoreBlack.png"
+          alt=""
+          class="action-to-download w-36"
+        />
+      </div>
+
+      <div class="flex justify-center md:gap-3 lg:gap-4 gap-2 mt-7 flex-wrap">
+        <div class="flex">
+          <span class="text-gray-500 self-center text-xs lg:text-base"
+            >Licenced by CBN as a MMO</span
+          >
+          <img
+            src="./images/centralBankBlack.png"
+            alt="legal-logo"
+            class="ml-1 w-5 h-5 self-center"
+          />
+        </div>
+        <div class="flex">
+          <span class="text-gray-500 self-center text-xs lg:text-base"
+            >Deposits Insured by</span
+          >
+          <img
+            src="./images/NDICBlack.png"
+            alt="legal-logo"
+            class="ml-1 w-16 h-auto"
+          />
+        </div>
+      </div>
+
+      <div class="sector__parent mt-12">
         <div class="flex justify-center w-full">
-            <h1 class="text-center font-extrabold pt-16 pb-5 hero--heading lg:w-2/3 lg:text-7xl leading-10">Finance That Fits Your Life</h1>
+          <div class="linear-gradient lg:px-28 px-6">
+            <img
+              src="./images/makeFinancial.png"
+              alt=""
+              class="financial-person"
+            />
+          </div>
+        </div>
+        <div class="main__sector pt-20 pb-20 lg:px-28 px-6">
+          <div
+            class="text-purple-500 text-center sector-header font-semibold text-2xl lg:text-5xl gradient-text-2"
+          >
+            Do more with your money
+          </div>
+          <p
+            class="text-center font-normal p-5 lg:w-11/12 text-white sector-text mt-4 leading-10"
+          >
+            More than just transferring money. You can do all kinds of cool
+            stuff - pay you bills, make purchase, save and earn, all financial
+            needs in one PalmPay app.
+          </p>
+
+          <div class="flex justify-center mb-32">
+            <div>
+              <img src="./images/payBills.png" alt="" class="person-bill" />
+            </div>
+          </div>
+          <div
+            class="text-purple-500 text-center sector-header font-semibold text-2xl lg:text-5xl gradient-text"
+          >
+            Earn as you spend with rewards
+          </div>
+          <p
+            class="text-center font-normal p-5 lg:w-11/12 text-white sector-text mt-3 leading-10"
+          >
+            With PalmPay, every expense becomes an opportunity to save. Unlock
+            exclusive discounts and cashback rewards with transaction you make.
+            Embrace cashless payment and make every payment count with PalmPay.
+          </p>
+
+          <div class="flex justify-center">
+            <div>
+              <img src="./images/coupons.png" alt="" class="person-bill" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative lg:p-20 w-full flex justify-center flex-wrap">
+        <div class="flex flex-col lg:flex-row p-4">
+          <img
+            src="./images/NDIC.png"
+            alt=""
+            class="lg:w-1/2 lg:rounded-tl-2xl lg:rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl"
+          />
+          <div
+            class="ndci-elements bg-gray-100 lg:rounded-tr-2xl lg:rounded-br-2xl lg:w-1/2 rounded-bl-2xl rounded-br-2xl lg:pt-32 lg:pl-16 lg:pr-8 pt-10 pb-10 pl-6 pr-6"
+          >
+            <div class="text-4xl font-semibold mb-10">
+              Your privacy and security is our top priority
+            </div>
+            <p class="text-sm lg:text-xl">
+              PalmPay is fully licensed as a Mobile Money Operator by CBN, and
+              insured by NDIC. We manage customers' funds in compliance with all
+              application regulations. This means that our more than 30 million
+              users and millions of businesses are protected.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative lg:p-20 w-full flex justify-center">
+        <div class="flex flex-col lg:flex-row p-4">
+          <div
+            class="ndci-elements bg-gray-100 lg:rounded-tl-2xl lg:rounded-bl-2xl lg:w-1/2 rounded-bl-2xl rounded-br-2xl lg:w-1/2 order-2 lg:order-1 lg:pt-32 lg:pl-16 lg:pr-8 pt-10 pb-10 pl-6 pr-6"
+          >
+            <div class="text-4xl font-semibold mb-10">We are happy to help</div>
+            <p class="text-sm lg:text-xl mb-10">
+              Browse topics, find resources, or chat with customer service.
+              PalmPay support has answers to all your questions. Have an
+              inquiry, or need Customer Service assistance?
+            </p>
+            <p class="text-sm lg:text-xl">Call us: +234 018886888</p>
+            <p class="text-sm lg:text-xl">Email: support@palmpay.com</p>
+
+            <div class="mt-6">
+              <button
+                class="bg-purple-500 py-3.5 px-10 contact-btn text-white text-normal font-semibold rounded-2xl"
+              >
+                Contact
+              </button>
+            </div>
+          </div>
+          <img
+            src="./images/HelpCenter.png"
+            alt=""
+            class="lg:w-1/2 lg:rounded-tl-2xl lg:rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl order-1 lg:order-2"
+          />
+        </div>
+      </div>
+
+      <div class="footer p-5">
+        <div></div>
+        <div class="grid md:grid-cols-5 sm:grid-cols-1 gap-4">
+          <div class="w-full">
+            <ul class="gap-4 flex flex-col pt-4 pb-8">
+              <li>
+                <img
+                  src="./images/logoLight.c6470eab.png"
+                  alt=""
+                  class="w-32"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.palmpay.com/_next/static/media/centralBank.e14647d7.png?w=256&q=100
+                            "
+                  alt=""
+                  class="w-32"
+                />
+              </li>
+              <li>
+                <img src="./images/PCI.png" alt="" class="w-32" />
+              </li>
+              <li>
+                <img src="./images/NDICwhite.png" alt="" class="w-32" />
+              </li>
+              <li>
+                <img src="./images/NDPC.png" alt="" class="w-32" />
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="gap-4 flex flex-col pt-4 pb-8">
+              <li class="text-white font-semibold">Personal</li>
+              <li class="text-white footer-links">Palmpay App</li>
+              <li class="text-white footer-links">Send and Receive Money</li>
+              <li class="text-white footer-links">Bill Payment</li>
+              <li class="text-white footer-links">Buy and Shop</li>
+            </ul>
+          </div>
+          <div>
+            <ul class="gap-4 flex flex-col pt-4 pb-8">
+              <li class="text-white font-semibold">Business</li>
+              <li class="footer-links">Payin</li>
+              <li class="footer-links">Payout</li>
+              <li class="footer-links">POS</li>
+              <li class="footer-links">Pay with Transfer</li>
+              <li class="footer-links">Business Account</li>
+              <li class="footer-links">Management</li>
+            </ul>
+          </div>
+          <div>
+            <ul class="gap-4 flex flex-col pt-4 pb-8">
+              <li class="text-white font-semibold">Company</li>
+              <li class="text-white footer-links">About</li>
+              <li class="text-white footer-links">Blog</li>
+              <li class="text-white footer-links">Press and Media</li>
+              <li class="text-white footer-links">Contact</li>
+            </ul>
+          </div>
+          <div>
+            <ul class="gap-4 flex flex-col pt-4 pb-8">
+              <li class="text-white font-semibold">Legal</li>
+              <li class="text-white footer-links">Privacy Policy</li>
+              <li class="text-white footer-links">Terms and Conditions</li>
+              <li class="text-white footer-links">Complaints</li>
+              <li class="text-white footer-links">Buy and Shop</li>
+            </ul>
+          </div>
         </div>
 
         <div class="flex justify-center">
-            <p class="text-center hero-text font-normal p-5 lg:w-11/12 lg:text-2xl leading-7">Seamlessly send and receive money, effortlessly pay your bills, shop anywhere with ease, and take full control of your finances - all in PalmPay</p>
+          <p class="text-xs text-gray-500">
+            PalmPay is a financial service provided by PalmPay Limited, licensed
+            and regulated by the Central Bank of Nigeria (CBN). Deposits are
+            insured by the Nigerian Deposit Insurance Corporation (NDIC). We
+            empower individuals and businesses with payments solutions,
+            high-yield investment opportunities, and easy-to-use tools for
+            financial management. We are a global company with a presence in
+            Nigeria, Ghana, Tanzania, and the United Kingdom.
+          </p>
         </div>
 
-        <div class="flex justify-center gap-4 mt-12 flex-wrap">
-            <img src="./images/googlePlayBlack.png" alt="" class="action-to-download w-36">
-            <img src="./images/appStoreBlack.png" alt="" class="action-to-download w-36">
-        </div>
+        <div></div>
+      </div>
+    </main>
 
-        <div class="flex justify-center  md:gap-3 lg:gap-4 gap-2 mt-7 flex-wrap ">
-            <div class="flex"><span class="text-gray-500 self-center text-xs lg:text-base">Licenced by CBN as a MMO</span>
-                <img src="./images/centralBankBlack.png" alt="legal-logo" class=" ml-1 w-5 h-5 self-center ">
-            </div>
-            <div class="flex"><span class="text-gray-500 self-center text-xs lg:text-base">Deposits Insured by</span>
-                <img src="./images/NDICBlack.png" alt="legal-logo" class=" ml-1 w-16 h-auto">
-            </div>
-        </div>
+    <!-- <script src="/public/app.js"></script> -->
+    <script>
+      const dropdown = document.getElementById("myDropdown");
+      const dropdownContent = document.querySelector(".dropdown-content");
+      const closeBtn = document.querySelector("#close-btn");
+      const openBtn = document.querySelector("#open-btn");
+      const menu = document.querySelector(".menu-hidden");
+      const dropdownItem = document.querySelectorAll(".dropdown-item");
 
-        <div class="sector__parent mt-12">
-            <div class="flex justify-center  w-full ">
-                <div class="linear-gradient lg:px-28 px-6 "><img src="./images/makeFinancial.png" alt="" class="financial-person"></div>
-            </div>
-            <div class="main__sector pt-20 pb-20  lg:px-28 px-6">
-                <div class="text-purple-500 text-center sector-header font-semibold text-2xl lg:text-5xl gradient-text-2">Do more with your money</div>
-                <p class="text-center  font-normal p-5 lg:w-11/12 text-white sector-text mt-4 leading-10">More than just transferring money. You can do all kinds of cool stuff - pay you bills, make purchase, save and earn, all financial needs in one PalmPay app.</p>
-            
-            <div class="flex justify-center mb-32">
-                <div>
-                    <img src="./images/payBills.png" alt="" class="person-bill">
-                </div>
-            </div>
-                <div class="text-purple-500 text-center sector-header font-semibold text-2xl lg:text-5xl gradient-text">Earn as you spend with rewards</div>
-                <p class="text-center  font-normal p-5 lg:w-11/12 text-white sector-text mt-3 leading-10">With PalmPay, every expense becomes an opportunity to save. Unlock exclusive discounts and cashback rewards with transaction you make. Embrace cashless payment and make every payment count with PalmPay.</p>
-            
-            <div class="flex justify-center">
-                <div>
-                    <img src="./images/coupons.png" alt="" class="person-bill">
-                </div>
-            </div>
-            </div>
+      console.log(dropdownItem);
 
-        </div>
-       
-        <div class="relative lg:p-20  w-full flex justify-center flex-wrap">
-            <div class="flex flex-col lg:flex-row p-4">
-                <img src="./images/NDIC.png" alt="" class="lg:w-1/2  lg:rounded-tl-2xl lg:rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl">
-                <div class="ndci-elements bg-gray-100  lg:rounded-tr-2xl lg:rounded-br-2xl lg:w-1/2 rounded-bl-2xl rounded-br-2xl lg:pt-32 lg:pl-16 lg:pr-8 pt-10 pb-10 pl-6 pr-6">
-                    <div class="text-4xl font-semibold mb-10">Your privacy and security is our top priority</div>
-                    <p class="text-sm lg:text-xl">PalmPay is fully licensed as a Mobile Money Operator by CBN, and insured by NDIC. We manage customers' funds in compliance with all application regulations. This means that our more than 30 million users and millions of businesses are protected.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="relative lg:p-20  w-full flex justify-center">
-            <div class="flex flex-col lg:flex-row p-4">
-                <div class="ndci-elements bg-gray-100  lg:rounded-tl-2xl lg:rounded-bl-2xl lg:w-1/2 rounded-bl-2xl rounded-br-2xl lg:w-1/2 order-2 lg:order-1 lg:pt-32 lg:pl-16 lg:pr-8 pt-10 pb-10 pl-6 pr-6">
-                    <div class="text-4xl font-semibold mb-10">We are happy to help</div>
-                    <p class="text-sm lg:text-xl mb-10">Browse topics, find resources, or chat with customer service. PalmPay support has answers to all your questions. Have an inquiry, or need Customer Service assistance?</p>
-                    <p class="text-sm lg:text-xl">Call us: +234 018886888
-</p>
-<p class="text-sm lg:text-xl">
-    Email: support@palmpay.com</p>
+      dropdown.addEventListener("click", function () {
+        dropdownContent.style.display = "block";
+      });
 
-    <div class="mt-6">
-        <button class="bg-purple-500 py-3.5 px-10 contact-btn text-white text-normal font-semibold rounded-2xl">Contact</button>
-    </div>
-                </div>
-                <img src="./images/HelpCenter.png" alt="" class=" lg:w-1/2  lg:rounded-tl-2xl lg:rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl order-1 lg:order-2">
-            </div>
-        </div>
-        
+      dropdownItem.forEach((item) =>
+        item.addEventListener("click", () => {
+          dropdownContent.style.display = "none";
+        })
+      );
 
+      openBtn.addEventListener("click", () => {
+         menu.style.display = "block";
+         openBtn.style.display ="none"
+         closeBtn.style.display ="block"
+      });
 
-        <div class="footer p-5">
-            <div></div>
-            <div class="grid md:grid-cols-5  sm:grid-cols-1 gap-4">
-                <div class="w-full">
-                    <ul class="gap-4 flex flex-col pt-4 pb-8">
-                        <li>
-                            <img src="./images/logoLight.c6470eab.png" alt="" class="w-32">
-                        </li>
-                        <li><img src="https://www.palmpay.com/_next/static/media/centralBank.e14647d7.png?w=256&q=100
-                            " alt="" class="w-32"></li>
-                        <li>
-                            <img src="./images/PCI.png" alt="" class="w-32">
-                        </li>
-                        <li>
-                            <img src="./images/NDICwhite.png" alt="" class="w-32">
-                        </li>
-                        <li>
-                            <img src="./images/NDPC.png" alt="" class="w-32">
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class ="gap-4 flex flex-col pt-4 pb-8">
-                        <li class ="text-white font-semibold">
-                            Personal
-                        </li>
-                        <li class ="text-white footer-links">Palmpay App</li>
-                        <li class ="text-white footer-links">
-                            Send and Receive Money
-                        </li>
-                        <li class ="text-white footer-links">
-                           Bill Payment
-                        </li>
-                        <li class ="text-white footer-links">
-                            Buy and Shop
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class ="gap-4 flex flex-col pt-4 pb-8">
-                        <li class ="text-white font-semibold">
-                            Business
-                        </li>
-                        <li class ="footer-links">Payin</li>
-                        <li class ="footer-links">
-                            Payout
-                        </li>
-                        <li class ="footer-links">
-                           POS
-                        </li>
-                        <li class ="footer-links">
-                            Pay with Transfer
-                        </li>
-                        <li class ="footer-links">
-                            Business Account
-                        </li>
-                        <li class ="footer-links">
-                            Management
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class ="gap-4 flex flex-col pt-4 pb-8">
-                        <li class ="text-white font-semibold">
-                            Company
-                        </li>
-                        <li class ="text-white footer-links">About</li>
-                        <li class ="text-white footer-links">
-                            Blog
-                        </li>
-                        <li class ="text-white footer-links">
-                           Press and Media
-                        </li>
-                        <li class ="text-white footer-links">
-                            Contact
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class ="gap-4 flex flex-col pt-4 pb-8">
-                        <li class ="text-white font-semibold">
-                            Legal
-                        </li>
-                        <li class ="text-white footer-links">Privacy Policy</li>
-                        <li class ="text-white footer-links">
-                            Terms and Conditions
-                        </li>
-                        <li class ="text-white footer-links">
-                           Complaints
-                        </li>
-                        <li class ="text-white footer-links">
-                            Buy and Shop
-                        </li>
-                    </ul>
-                </div>
-               
-            </div>
+      closeBtn.addEventListener("click", () => {
+         menu.style.display = "none";
+         openBtn.style.display ="block"
+         closeBtn.style.display ="none"
+      });
+    </script>
 
-            <div class="flex justify-center">
-                <p class="text-xs text-gray-500">PalmPay is a financial service provided by PalmPay Limited, licensed and regulated by the Central Bank of Nigeria (CBN). Deposits are insured by the Nigerian Deposit Insurance Corporation (NDIC). We empower individuals and businesses with payments solutions, high-yield investment opportunities, and easy-to-use tools for financial management. We are a global company with a presence in Nigeria, Ghana, Tanzania, and the United Kingdom.</p>
-            </div>
-
-            <div></div>
-           </div>
-   </main>
-
-   <!-- <script src="/public/app.js"></script> -->
-   <script>
-    const dropdown = document.getElementById("myDropdown");
-const dropdownContent = document.querySelector(".dropdown-content");
-const dropdownItem = document.querySelectorAll(".dropdown-item") 
-console.log(dropdownItem);
-
-dropdown.addEventListener("click", function() {
-    dropdownContent.style.display = "block";
-   
-});
-
-dropdownItem.forEach(item => item.addEventListener('click', () => {
-    dropdownContent.style.display = 'none' 
-}))
-
-
-   </script>
-
-   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  
-</body>
-
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
 </html>

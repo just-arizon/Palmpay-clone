@@ -397,3 +397,9 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.menu-hidden{
+  display:none;
+}
+#close-btn{
+  display: none;
+}
