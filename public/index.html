@@ -11,221 +11,96 @@
     <link rel="stylesheet" href="../src/profile.css">
     <link rel="stylesheet" href="../src/balance.css">
 </head>
-<body class="bg-purple-50">
-    <nav class="navbar shadow-md">
+<body class="">
+    <nav class="navbar lg:pl-24 lg:pr-20 pt-2 fixed w-full bg-white">
         <ul class="p-3 links__container flex justify-between">
-            <li>
-                <div class="nav--icon__wrapper flex justify-center">
-                    <button class="nav--icon"></button>
+            <li class="flex gap-14">
+                <div class="flex items-center"><img src="./images/logo.png" alt="logo" class="logo w-28 lg:w-32 h-auto"></div>
+                <div class="lg:flex items-center gap-6 hidden ">
+                    <a href="" class="mr-6">Personal</a>
+                    <a href="" class="mr-6">Business</a>
+                    <a href="" class="mr-6">Company</a>
                 </div>
-                <div class="nav--name text-xs">Home</div>
             </li>
+
+
             <li>
-                <div class="nav--icon__wrapper flex justify-center">
-                    <button class="nav--icon"></button>
+                <div class=" flex justify-center">
+                    <button class="bg-gray-300">Nigeria</button>
                 </div>
-                <div class="nav--name text-xs">Loans</div>
             </li>
-            <li>
-                <div class="nav--icon__wrapper flex justify-center">
-                    <button class="nav--icon"></button>
-                </div>
-                <div class="nav--name text-xs">Invest</div>
-            </li>
-            <li>
-                <div class="nav--icon__wrapper flex justify-center">
-                    <button class="nav--icon"></button>
-                </div>
-                <div class="nav--name text-xs text-center">Giveaway</div>
-            </li>
-            <li>
-                <div class="nav--icon__wrapper flex justify-center">
-                    <button class="nav--icon"></button>
-                </div>
-                <div class="nav--name text-xs text-center">Me</div>
-            </li>
+           
         </ul>
     </nav>
-    <div class=" flex justify-between p-2.5 w-full fixed bg-purple-50 z-40">
-        <div class="profile__container flex gap-2">
-            <div class="profile--svg flex items-center">
-                <div class="svg--container w-9 h-9 rounded-full flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <iconify-icon icon="iconamoon:profile-fill" style="color: white;" width="27" height="27"></iconify-icon>
-                    </div>
-                </div>
-            </div>
-            <div class="profile--name">
-                <h1 class="mb-0  text-sm">Hi, arinze</h1>
-                <p class="text-xs text-gray-400">Welcome, let's make payments!</p>
-            </div>
-        </div>
-        <div class="notification__container flex gap-4">
-            <button class="scanner--svg">
-                <iconify-icon icon="iconamoon:scanner-light" style="color: #475467;" width="24" height="24"></iconify-icon>
-            </button>
-            <button class="bell--name">
-                <iconify-icon icon="teenyicons:bell-outline" style="color: #475467;" width="24" height="24"></iconify-icon>
-            </button>
-        </div>
-    </div>
+
    <main class="pt-16">
-    
-    <div class="w-full p-2.5 flex justify-between gap-2">
-        <span class="warning--svg">
-            <iconify-icon icon="ep:warning" width="16" height="16" class="text-orange-300"></iconify-icon>
-        </span>
-        <span class="text-orange-300 text-xs flex-1"><marquee scrollamount="4" behavior="" direction="">Based on CBN KYC requirements, please verify your BVN or NIN information to better enjoy Palmpay's service.</marquee></span>
-    </div>
-    <div class="w-full p-2.5">
-      <div class=" bg-white rounded-lg">
-          <div class="balance__container rounded-lg p-2">
-            <div class="toggle__wrapper">
-                <span class="flex gap-2">
-                    <span class="flex items-center relative">
-                        <div class="bg-white behind"></div>
-                        <iconify-icon icon="clarity:shield-check-solid" width="16" height="16" class="text-green-300 front"></iconify-icon>
-                    </span>
-                    <span class="text-sm">Total Balance</span>
-                    <span><iconify-icon icon="teenyicons:eye-closed-solid" width="16" height="16"></iconify-icon></span>
-                </span>
+        <div class="flex justify-center w-full">
+            <h1 class="text-center font-extrabold pt-16 hero--heading lg:w-2/3 lg:text-7xl">Finance That Fits Your Life</h1>
+        </div>
+
+        <div class="flex justify-center">
+            <p class="text-center hero-text font-normal p-5 lg:w-11/12 lg:text-2xl leading-7">Seamlessly send and receive money, effortlessly pay your bills, shop anywhere with ease, and take full control of your finances - all in PalmPay</p>
+        </div>
+
+        <div class="flex justify-center gap-4 mt-12 flex-wrap">
+            <img src="./images/googlePlayBlack.png" alt="" class="action-to-download">
+            <img src="./images/appStoreBlack.png" alt="" class="action-to-download">
+        </div>
+
+        <div class="flex justify-center  md:gap-3 lg:gap-4 gap-2 mt-7 flex-wrap">
+            <div class="flex"><span class="text-gray-500 self-center text-xs lg:text-base">Licenced by CBN as a MMO</span>
+                <img src="./images/centralBankBlack.png" alt="" class="legal-logo ml-1">
+            </div>
+            <div class="flex"><span class="text-gray-500 self-center text-xs lg:text-base">Deposits Insured by</span>
+                <img src="./images/NDICBlack.png" alt="" class="legal-logo2 ml-1">
+            </div>
+        </div>
+
+        <div class="sector__parent">
+            <div class="flex justify-center  lg:px-28 px-6">
+                <div><img src="./images/makeFinancial.png" alt="" class="financial-person"></div>
+            </div>
+            <div class="main__sector pt-96 pb-20  lg:px-28 px-6">
+                <div class="text-purple-500 text-center sector-header font-medium text-2xl lg:text-5xl">Do more with your money</div>
+                <p class="text-center  font-normal p-5 lg:w-11/12 text-white sector-text mt-4 leading-10">More than just transferring money. You can do all kinds of cool stuff - pay you bills, make purchase, save and earn, all financial needs in one PalmPay app.</p>
+            
+            <div class="flex justify-center mb-48">
+                <div>
+                    <img src="./images/payBills.png" alt="" class="person-bill">
+                </div>
+            </div>
+                <div class="text-purple-500 text-center sector-header font-medium text-2xl lg:text-5xl">Earn as you spend with rewards</div>
+                <p class="text-center  font-normal p-5 lg:w-11/12 text-white sector-text mt-4 leading-10">With PalmPay, every expense becomes an opportunity to save. Unlock exclusive discounts and cashback rewards with transaction you make. Embrace cashless payment and make every payment count with PalmPay.</p>
+            
+            <div class="flex justify-center">
+                <div>
+                    <img src="./images/coupons.png" alt="" class="person-bill">
+                </div>
+            </div>
             </div>
 
-            <div class="actual__balance flex justify-between pl-2 pr-2">
-                <div class="flex items-center">****</div>
-                <button class="text-xs bg-brand-color p-2 text-white rounded-full">Add Money</button>
-            </div>
-          </div>
-          <div class="p-2 flex gap-1 justify-between">
-            <span class="flex items-center"><iconify-icon icon="material-symbols-light:savings" width="16" height="16" class="text-brand-color"></iconify-icon></span>
-            <span class="text-xs">Start a savings account, earn up to <span class="text-brand-color font-semibold">20% p.a.</span> daily</span>
-            <span>
-                <iconify-icon icon="iconamoon:arrow-right-6-circle-duotone" width="16" height="16" class="text-brand-color"></iconify-icon>
-            </span>
-          </div>
-      </div>
-    </div>
-    <div class="p-2.5">
-        <div class="bg-white rounded-md p-2">
-            <div class="text-sm font-semibold">Money Transfer</div>
-            <div class="flex justify-between items-center p-2.5">
-                <div>
-                    <div class="flex justify-center">
-                        <iconify-icon icon="bxs:bank" width="30" height="30" class="text-brand-color"></iconify-icon>
-                    </div>                  <div class="text-xs">To Bank</div>
-                </div>
-                <div>
-                    <div class="flex justify-center">
-                        <iconify-icon icon="material-symbols:contacts-product" width="30" class="text-brand-color"></iconify-icon>
-                    </div>
-                    <div class="text-xs">To Palmpay</div>
-                </div>
-                <div>
-                    <div class="flex justify-center">
-                        <iconify-icon icon="clarity:wallet-solid" width="30" class="text-blue-600"></iconify-icon>
-                    </div>                  <div class="text-xs">To Bank</div>
+        </div>
+       
+        <div class="relative lg:p-20  w-full flex justify-center flex-wrap">
+            <div class="flex flex-col lg:flex-row p-4">
+                <img src="./images/NDIC.png" alt="" class="lg:w-1/2  lg:rounded-tl-2xl lg:rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl">
+                <div class="ndci-elements bg-gray-100  lg:rounded-tr-2xl lg:rounded-br-2xl lg:w-1/2 rounded-bl-2xl rounded-br-2xl pt-32 px-16">
+                    <div>Your privacy and security is our top priority</div>
+                    <p>PalmPay is fully licensed as a Mobile Money Operator by CBN, and insured by NDIC. We manage customers' funds in compliance with all application regulations. This means that our more than 30 million users and millions of businesses are protected.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="p-2.5 ">
-        <div class="balance__container p-3 rounded-md">
-         <div class="text-center text-purple-950 font-extrabold text-lg">Exclusive for You</div>
-         <div class="flex gap-2 justify-center mt-2">
-            <div class="bg-gray-300 w-24 h-16"></div>
-            <div class="bg-gray-300 w-24 h-16"></div>
-         </div>
+        
+        <div class="relative lg:p-20  w-full flex justify-center">
+            <div class="flex flex-col lg:flex-row p-4">
+                <div class="ndci-elements bg-gray-100  lg:rounded-tl-2xl lg:rounded-bl-2xl lg:w-1/2 rounded-bl-2xl rounded-br-2xl lg:w-1/2 order-2 lg:order-1 pt-32 px-16">
+                    <div>Your privacy and security is our top priority</div>
+                    <p>PalmPay is fully licensed as a Mobile Money Operator by CBN, and insured by NDIC. We manage customers' funds in compliance with all application regulations. This means that our more than 30 million users and millions of businesses are protected.</p>
+                </div>
+                <img src="./images/HelpCenter.png" alt="" class=" lg:rounded-tr-2xl lg:rounded-br-2xl rounded-tl-2xl rounded-tr-2xl lg:w-1/2 order-1 lg:order-2">
+            </div>
         </div>
-    </div>
-    <div class="p-2.5">
-        <div class="bg-white rounded-md p-2">
-            <div class="text-sm font-semibold">Services</div>
-            <ul class="p-3 grid grid-cols-4 gap-4">
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center">Airtime</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center">Data Bundles</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center">Betting Fund</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center text-center">Electricity</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center text-center">TV</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center">Recharge
-                <br>
-                        2cash</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center">Gift Card</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center">CashBox</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center text-center">Win Big</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center text-center">Refer & Earn</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center text-center">Invitation</div>
-                </li>
-                <li>
-                    <div class="nav--icon__wrapper flex justify-center">
-                        <button class="nav--icon"></button>
-                    </div>
-                    <div class="nav--name text-xs text-center text-center">Giveaway Tracker</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="p-2.5 ">
-        <div class="balance__container p-7 rounded-md">
-         <div class="flex gap-2 justify-center mt-2">
-           
-         </div>
-        </div>
-    </div>
+        
    </main>
 </body>
 
