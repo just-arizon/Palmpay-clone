@@ -3,10 +3,6 @@ const dropdownContent = document.querySelector(".dropdown-content");
 const dropdownItem = document.querySelectorAll(".dropdown-item") 
 console.log(dropdownItem);
 
-dropdown.addEventListener("mouseenter", function() {
-    dropdownContent.style.display = "block";
-   
-});
 dropdown.addEventListener("click", function() {
     dropdownContent.style.display = "block";
    
