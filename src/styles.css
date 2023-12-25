@@ -379,3 +379,7 @@
   -webkit-background-clip: text; /* For Safari/Chrome/iOS */
   background-clip: text;
 }
+
+.contact-btn{
+  background: #6d46db;
+}
