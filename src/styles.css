@@ -387,6 +387,7 @@
 .footer-links{
   color: #d9dbe1;
 }
-.drop-btn{
+.drop-btn,
+.dropdown-item{
   background: #f7f7fb;
 }
