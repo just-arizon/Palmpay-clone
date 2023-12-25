@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
 /* ./your-css-folder/styles.css */
 
@@ -590,6 +590,10 @@ video {
   margin-top: 1.75rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .flex{
   display: flex;
 }
@@ -731,16 +735,20 @@ video {
   padding-top: 0.5rem;
 }
 
+.pt-24{
+  padding-top: 6rem;
+}
+
 .pt-32{
   padding-top: 8rem;
 }
 
-.pt-96{
-  padding-top: 24rem;
-}
-
 .pt-40{
   padding-top: 10rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
 }
 
 .text-center{
@@ -819,6 +827,7 @@ html {
 body {
   margin: 0;
   font-family:'Poppins', sans-serif;
+  color: #18191F;
 }
 
 /**
@@ -1177,6 +1186,10 @@ template {
 
 .sector__parent{
   background: #18191F;
+}
+
+.linear-gradient{
+  background: linear-gradient(to bottom, #ffffff 50%, #18191F 50%);
 }
 
 @media (min-width: 768px){

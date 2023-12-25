@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
 /* ./your-css-folder/styles.css */
 @tailwind base;
@@ -30,6 +30,7 @@
   body {
     margin: 0;
     font-family:'Poppins', sans-serif;
+    color: #18191F;
   }
   
   /**
@@ -358,4 +359,7 @@
   }
  .sector__parent{
   background: #18191F;
+ }
+ .linear-gradient{
+  background: linear-gradient(to bottom, #ffffff 50%, #18191F 50%);
  }
