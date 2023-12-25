@@ -7,6 +7,10 @@ dropdown.addEventListener("mouseenter", function() {
     dropdownContent.style.display = "block";
    
 });
+dropdown.addEventListener("click", function() {
+    dropdownContent.style.display = "block";
+   
+});
 
 dropdownItem.forEach(item => item.addEventListener('click', () => {
     dropdownContent.style.display = 'none' 
